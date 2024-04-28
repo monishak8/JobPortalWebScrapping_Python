@@ -7,26 +7,26 @@ Collect job listings from LinkedIn using web scraping techniques.
 Extract key information such as job title, company name, location, and posting date.
 Analyze the collected data to identify trends in job titles, industries, and locations.
 
-##3. Methodology
+3. Methodology
 
-Scraping LinkedIn Job Listings
-To scrape job listings from LinkedIn, the following methodology was followed:
-URL Generation: The script generates a search URL based on user-provided keywords and location.
-Page Iteration: It iterates through multiple pages of search results to gather more job listings.
-Data Extraction: Using BeautifulSoup, it extracts job details from HTML elements such as title, company, location, and posting time.
-
-Extracting Additional Job Details
-To gather more insights, the script accesses individual job pages to extract additional details:
-Job Level: Information about the seniority level of the job.
-Job Type: Whether the job is full-time, part-time, contract, etc.
-Job Function: The primary function or role associated with the job.
-Industry: The industry or sector to which the job belongs.
-
-Data Analysis
-Once the data is collected, it is organized into a pandas DataFrame for analysis:
-Data Cleaning: Removing any irrelevant or duplicate entries.
-Exploratory Data Analysis (EDA): Analyzing the distribution of job titles, companies, locations, etc.
-Insights Generation: Identifying common job levels, types, functions, and industries.
+    Scraping LinkedIn Job Listings
+    To scrape job listings from LinkedIn, the following methodology was followed:
+    URL Generation: The script generates a search URL based on user-provided keywords and location.
+    Page Iteration: It iterates through multiple pages of search results to gather more job listings.
+    Data Extraction: Using BeautifulSoup, it extracts job details from HTML elements such as title, company, location, and posting time.
+    
+    Extracting Additional Job Details
+    To gather more insights, the script accesses individual job pages to extract additional details:
+    Job Level: Information about the seniority level of the job.
+    Job Type: Whether the job is full-time, part-time, contract, etc.
+    Job Function: The primary function or role associated with the job.
+    Industry: The industry or sector to which the job belongs.
+    
+    Data Analysis
+    Once the data is collected, it is organized into a pandas DataFrame for analysis:
+    Data Cleaning: Removing any irrelevant or duplicate entries.
+    Exploratory Data Analysis (EDA): Analyzing the distribution of job titles, companies, locations, etc.
+    Insights Generation: Identifying common job levels, types, functions, and industries.
 
 4. Results
 The scraping and analysis process yielded the following results:
