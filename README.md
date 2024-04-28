@@ -1,28 +1,44 @@
-ISDS 558 - Web Scrapping Job portal to gain Market Insights
+1. Introduction
+In today's job market, staying informed about available opportunities is crucial for job seekers. LinkedIn provides a vast database of job listings across various industries and locations. However, manually searching for relevant jobs can be time-consuming. This project aims to automate the process by scraping job listings from LinkedIn based on user-defined search criteria.
 
-Project Overview:
-In a recent deep dive into the 2006 Credit Card Debt Crisis in Taiwan, unfolded a compelling narrative around two critical factors - the over-issuance of cards to unqualified applicants and the rampant overuse by holders, irrespective of their repayment ability.
+2. Objective
+The primary objective of this project is to develop a Python script to:
+Collect job listings from LinkedIn using web scraping techniques.
+Extract key information such as job title, company name, location, and posting date.
+Analyze the collected data to identify trends in job titles, industries, and locations.
 
-1) Exploratory Data Analysis Highlights:
-- 🚹 Male credit holders found in the minority.
-- ⚠️ Defaulters outnumber non-defaulters by fourfold.
-- 📊 Non-defaults feature a higher proportion of females aged 30-40.
+3. Methodology
+3.1 Scraping LinkedIn Job Listings
+To scrape job listings from LinkedIn, the following methodology was followed:
 
-2) Data Cleaning & Preprocessing:
-- ✅ Conducted meticulous checks for missing values.
-- 📊 Analyzed distributions for continuous variables.
-- 🔄 Merged infrequent observations for a cleaner dataset.
-- 🏷️ Applied label encoding for categorical variables.
-- 📉 Generated a comprehensive correlation matrix.
+URL Generation: The script generates a search URL based on user-provided keywords and location.
+Page Iteration: It iterates through multiple pages of search results to gather more job listings.
+Data Extraction: Using BeautifulSoup, it extracts job details from HTML elements such as title, company, location, and posting time.
+3.2 Extracting Additional Job Details
+To gather more insights, the script accesses individual job pages to extract additional details:
 
-3) Model Implementation: 
-- Logistic Regression: 77.8% overall accuracy at a 0.5 cutoff.
-- KNN (K-Nearest Neighbors):Achieved an impressive 79% overall accuracy at the 0.5 cutoff.
-- Classification Tree Model: Emerged as the star player with an outstanding 83% overall accuracy at the 0.5 cutoff.
+Job Level: Information about the seniority level of the job.
+Job Type: Whether the job is full-time, part-time, contract, etc.
+Job Function: The primary function or role associated with the job.
+Industry: The industry or sector to which the job belongs.
+3.3 Data Analysis
+Once the data is collected, it is organized into a pandas DataFrame for analysis:
 
-4) Project Culmination:
-The project's pinnacle lies in the success of the Classification Tree model, boasting an 83% overall accuracy. These findings not only shed light on the past credit card crisis but also provide a robust framework for predicting and managing risks in similar financial scenarios.
+Data Cleaning: Removing any irrelevant or duplicate entries.
+Exploratory Data Analysis (EDA): Analyzing the distribution of job titles, companies, locations, etc.
+Insights Generation: Identifying common job levels, types, functions, and industries.
+4. Results
+The scraping and analysis process yielded the following results:
 
-Key Takeaways:
-Data-driven decision-making is paramount, especially in navigating the intricate landscapes of financial crises.Project Overview: In a recent deep dive into the 2006 Credit Card Debt Crisis in Taiwan, unfolded a compelling narrative around two critical factors - the over-issuance of cards to unqualified applicants and the rampant overuse by holders, irrespective of their repayment ability. 
-Skills: Python · Logistic Regression · K-Nearest Neighbors (KNN) · Decision Trees
+Total Entries Retrieved: 250 job listings
+Time Taken: Approximately 3.0 minutes for scraping
+Data Summary: A comprehensive DataFrame containing job title, company name, location, posting date, job level, job type, job function, and industry.
+5. Conclusion
+This project demonstrates the effectiveness of web scraping techniques in gathering job listings from LinkedIn. The collected data provides valuable insights into the current job market trends for the specified search criteria. By automating the process, job seekers can save time and stay updated on available opportunities.
+
+6. Future Enhancements
+To further improve the project, the following enhancements could be considered:
+
+Sentiment Analysis: Analyze job descriptions to gauge sentiment regarding job satisfaction or requirements.
+Data Visualization: Create charts or graphs to visualize job distribution across different attributes.
+Machine Learning Integration: Implement algorithms for job recommendation or classification based on user preferences.
